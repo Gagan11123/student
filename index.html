@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full-Stack Student Portal Project Report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles.css" />
+ 
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <h2 class="logo">Student Portal</h2>
+      <a href="#" onclick="showSection('home')">🏠 Home</a>
+      <a href="#" onclick="showSection('overview')">📘 Overview</a>
+      <a href="#" onclick="showSection('user-roles')">👥 Roles</a>
+      <a href="#" onclick="showSection('tech-stack')">🛠️ Tech Stack</a>
+      <a href="#" onclick="showSection('rbac')">🔐 RBAC</a>
+      <a href="#" onclick="showSection('extra-features')">✨ Features</a>
+      <a href="#" onclick="showSection('project-demo')">🎥 Project Demo</a>
+      <a href="#" onclick="showSection('resources')">📚 Resources</a>
+      <a href="#" onclick="showSection('documents')">📄 Documents</a>
+      <div class="theme-toggle" onclick="toggleTheme()">🌗 Toggle Theme</div>
+    </nav>
+    
+    <div class="content">
+      <header>
+        <h1>Full-Stack Student Portal with Role-Based Dashboards</h1>
+        <p>Project Report by KARTHIK, NARESH, MALIKARJUN</p>
+      </header>
+
+      <main>
+        <section id="home" class="section active">
+          <div class="card" data-tilt>
+            <h2>Welcome to the Student Portal Project</h2>
+            <p>This project is a full-stack student portal designed to provide role-based dashboards for Students, Teachers, and Administrators. Each role has unique capabilities for managing coursework, communication, and administrative functions.</p>
+          </div>
+          <div class="image-wrapper" data-tilt>
+      <img src="https://img.freepik.com/premium-vector/education-learning-university-background_23-2151676146.jpg?w=996" alt="Education Background" />
+          </div>
+        </section>
+
+          
+        
+  
+
+       
+
+
+
+
+
+
+
+
+      <section id="overview" class="section">
+          <div class="card" data-tilt>
+            <h2>Project Overview</h2>
+            
+    <p>The Student Portal Project is a centralized web application tailored to streamline academic workflows for students, faculty, and administrators. It offers customized dashboards for each user role, delivering tools aligned with their responsibilities.</p>
+    <p>Students can view course materials, track progress, and submit assignments. Teachers manage academic content, evaluate submissions, and communicate with their classes. Administrators oversee system-wide settings, user management, and institutional data.</p>
+    <p>This portal emphasizes a seamless user experience through a responsive interface, integrated authentication, and secure, role-based access. It's built for modern educational institutions seeking digital transformation.</p>
+  
+          </div>
+        </section>
+
+        <section id="user-roles" class="section">
+          <div class="card" data-tilt>
+            <h2>User Roles & Dashboards</h2>
+            <h3>Student Dashboard</h3>
+            <ul>
+              <li>View courses and materials</li>
+              <li>Submit assignments with file uploads</li>
+              <li>Track grades and attendance</li>
+              <li>Real-time query submission to teachers</li>
+            </ul>
+          </div>
+          <div class="card" data-tilt>
+            <h3>Teacher Dashboard</h3>
+            <ul>
+              <li>Manage course content</li>
+              <li>Grade assignments with rubrics</li>
+              <li>Respond to student queries</li>
+            </ul>
+          </div>
+          <div class="card" data-tilt>
+            <h3>Administrator Dashboard</h3>
+            <ul>
+              <li>User and role management</li>
+              <li>Generate platform-wide reports</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="tech-stack" class="section">
+          <div class="card" data-tilt>
+            <h2>Technical Stack</h2>
+            <p>Frontend: Next.js + Tailwind CSS</p>
+            <p>Backend: Node.js + Express.js, MongoDB Atlas</p>
+            <p>Authentication: NextAuth.js with JWT</p>
+            <p>Deployment: Vercel (frontend) + Render/Heroku (backend)</p>
+          </div>
+        </section>
+
+        <section id="rbac" class="section">
+          <div class="card" data-tilt>
+            <h2>Role-Based Access Control (RBAC)</h2>
+            <p>RBAC allows different access levels for Students, Teachers, and Admins, using middleware to enforce role-based security.</p>
+          </div>
+        </section>
+
+        <section id="extra-features" class="section">
+          <div class="card" data-tilt>
+            <h2>Extra Features</h2>
+            <ul>
+              <li>Real-Time Chat between students and teachers</li>
+              <li>Catering Services Management</li>
+              <li>File Upload & Management for assignments</li>
+              <li>Analytics & Reports for performance tracking</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="project-demo" class="section">
+  <div class="card" data-tilt>
+    <h2>Project Demo</h2>
+    <p>Watch the project in action below:</p>
+    <iframe src="https://v0-full-stack-student-portal.vercel.app" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+    
+    <a href="https://v0-full-stack-student-portal.vercel.app" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="launch-demo-btn">
+      🚀 Launch Demo in New Tab
+    </a>
+  </div>
+</section>
+
+
+        <section id="resources" class="section">
+          <div class="card" data-tilt>
+            <h2>Additional Resources</h2>
+            <ul>
+              <li><a href="https://medium.com" target="_blank">RBAC in Node.js</a></li>
+              <li><a href="https://github.com" target="_blank">GitHub Repo for Next.js RBAC</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="documents" class="section">
+          <div class="card" data-tilt>
+            <h2>Project Documents</h2>
+            <ul>
+              <li><a href="documents/report.docx" target="_blank" download>📥 Download Project Report</a></li>
+              <li><a href="documents/Student_Portal_Presentation.pptx" target="_blank" download>📥 Download Project Presentation</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,202 @@
+ 
+    :root {
+      --bg-light: #f5f5f5;
+      --bg-dark: #121212;
+      --text-light: #ffffff;
+      --text-dark: #111111;
+      --accent: #00ffe7;
+      --glass: rgba(255, 255, 255, 0.1);
+      --glass-dark: rgba(18, 18, 18, 0.4);
+      --border-glow: 1px solid rgba(0, 255, 231, 0.4);
+      --transition: 0.4s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      transition: var(--transition);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      height: 100vh;
+    }
+
+    .sidebar {
+      background: linear-gradient(145deg, #1f1f1f, #2b2b2b);
+      padding: 2rem;
+      border-right: var(--border-glow);
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+    .sidebar a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      transition: var(--transition);
+    }
+
+    .sidebar a:hover {
+      background-color: var(--accent);
+      color: var(--bg-dark);
+      box-shadow: 0 0 12px var(--accent);
+    }
+
+    .content {
+      padding: 2rem;
+      overflow-y: auto;
+    }
+
+    .section {
+      display: none;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card {
+      background: var(--glass-dark);
+      border: var(--border-glow);
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--accent);
+    }
+
+    .theme-toggle {
+      margin-top: auto;
+      padding: 0.5rem;
+      color: var(--accent);
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  .launch-demo-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 0 12px var(--accent);
+  transition: var(--transition);
+}
+
+.launch-demo-btn:hover {
+  background-color: #00e6d3;
+  box-shadow: 0 0 20px var(--accent);
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+/* Specific styles for image-wrapper */
+.image-wrapper {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 255, 231, 0.2);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 255, 231, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin: 2rem auto; /* Centering and margin */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Optional hover effect */
+.image-wrapper:hover {
+  transform: scale(1.05); /* Slightly zoom in on hover */
+  box-shadow: 0 0 40px rgba(0, 255, 231, 0.4);
+}
+
+.image-wrapper[data-tilt] {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+  transition: transform 0.4s ease;
+}
+
+
+
+
+
+/* Style for the download link in the list */
+li a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: var(--accent); /* Accent color */
+  text-decoration: none;
+  border-radius: 8px;
+  background: var(--button-bg, #0062cc); /* Default button background */
+  transition: all 0.3s ease;
+  margin: 0.5rem 0; /* Spacing for the list item */
+}
+
+/* Hover effect for the download link */
+li a:hover {
+  background: var(--button-hover-bg, #004b9e); /* Darker background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Icon styling next to the text */
+li a::before {
+  content: "📥"; /* Download icon */
+  margin-right: 8px;
+}
+
+/* Optional: Add more customization for active or focus states */
+li a:focus {
+  outline: 2px solid var(--accent);
+}
